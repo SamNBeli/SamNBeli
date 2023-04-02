@@ -30,6 +30,7 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = ['samnbeli.up.railway.app', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://samnbeli.up.railway.app/','https://*.127.0.0.1']
 
 # Application definition
 
