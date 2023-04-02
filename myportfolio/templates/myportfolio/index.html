@@ -1,0 +1,84 @@
+{% extends 'myportfolio/layout.html' %}
+
+{% block title %}SamNBéli{% endblock %}
+
+{% load static %}
+
+{% block body %}
+    <!--HERO**************************************-->
+    <section class="hero-bcg hero-section">
+        <div class="container">
+            <p class="hero-intro">Welcome to my portfolio, where you can catch a glimpse of my passion for web development. Through my work, I aim to inspire, create, and make a positive impact.</p>
+        </div>
+    </section>
+  
+    <!--SKILL**************************************-->
+    <section class="skill-section">
+        <div class="container">
+            <p class="sk-sec-title">My special skills</p>
+            <div class="sk-cont">
+                <div class="sk-icon">
+                    <p class="sk-name">ReactJS</p>
+                    <img class="sk-icons" src="{% static 'myportfolio/images/react.svg' %}" alt="React JS">
+                </div>
+                <div class="sk-icon">
+                    <p class="sk-name">Django</p>
+                    <img class="sk-icons" src="{% static 'myportfolio/images/django.svg' %}" alt="Django">
+                </div>
+                <div class="sk-icon">
+                    <p class="sk-name">Python</p>
+                    <img class="sk-icons" src="{% static 'myportfolio/images/python.svg' %}" alt="Python">
+                </div>
+                <div class="sk-icon">
+                    <p class="sk-name">PostgreSQL</p>
+                    <img class="sk-icons" src="{% static 'myportfolio/images/postgresql.svg' %}" alt="Postgresql">
+                </div>
+                <div class="sk-icon">
+                    <p class="sk-name">Git</p>
+                    <img class="sk-icons" src="{% static 'myportfolio/images/git.svg' %}" alt="Git">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--PROJECT**************************************-->
+    <section class="project-section">
+        <div class="container">
+            <p class="pj-sec-title">Project</p>
+            {% if projects %}
+                {% for project in projects %}
+                    <div class="even-columns contp"{% if forloop.counter|divisibleby:2 %} style="flex-direction: row-reverse;"{% endif %}>
+                        <div class="prj-text">
+                            <div class="prj-tag-columns">
+                                {% for tag in project.tags.all %}
+                                    <div>
+                                        <p class="prj-tags">#{{tag.name}}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <p class="prj-name">{{project.name}}</p>
+                            <p class="prj-description">{{project.description}}</p>
+                            <p class="prj-stack-title" style="margin-bottom: 0.5rem;">
+                                USED STACK:
+                            </p>
+                            <div class="prj-stack-columns">
+                                {% for tool in project.tools.all %}
+                                    <div>
+                                        <p class="prj-stack">{{tool.name}}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="prj-btn-link">
+                                <button class="prj-btn" onclick="window.location.href = '{{project.sourcelink}}'">Source</button>
+                                <button class="prj-btn" onclick="window.location.href = '{{project.livelink}}'">Live</button>
+                            </div>
+                        </div>
+                        <div class="prj-img">
+                            <img class="prj-cover" src={{project.image}} alt="Images"/>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
