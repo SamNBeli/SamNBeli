@@ -1,7 +1,7 @@
 :root {
     --clr-primary-text-black: rgb(0, 0, 0);
     --clr-primary-text-white: rgb(255, 255, 255);
-    --clr-secondary-gray: rgb(55, 55, 55);
+    --clr-secondary-gray: rgb(95, 95, 95);
     --clr-accent: rgb(0, 76, 255);
     --clr-background-blk: rgb(0, 0, 0);
     --clr-background-wht: rgb(255, 255, 255);
@@ -13,7 +13,7 @@
     --fs-title: 2.3rem;
     --fs-sub-title: 1.5rem;
     --fs-regular: 1rem;
-    --fs-small: 0.7rem;
+    --fs-small: 0.8rem;
 
     --fw-regular: 400;
     --fw-semi-bold: 500;
@@ -158,6 +158,8 @@ svg {
 }
 
 .prj-description{
+    margin-top: 0.7rem;
+    margin-bottom: 0;
     font-size: var(--fs-regular);
 }
   
@@ -165,17 +167,20 @@ svg {
     font-size: var(--fs-sub-title);
     font-weight: var(--fw-bold);
     margin-bottom: 0;
+    margin-top: 0.7rem;
 }
-  
+
 .prj-stack{
     background: var(--clr-background-dwht);
     padding: 0.2rem 0.5rem;
     border-radius: 5px;
     font-size: var(--fs-small);
+    margin: 0;
 }
   
 .prj-stack-title{
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .contp{
@@ -199,7 +204,10 @@ svg {
     flex-direction: column;
     justify-content: center;
 }
-  
+.prj-btn-link{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
 .prj-btn{
     background-color: var(--clr-accent);
     border: none;
@@ -211,6 +219,7 @@ svg {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10px;
+    font-size: var(--fs-small);
 }
   
 .prj-stack-columns{
@@ -267,9 +276,16 @@ svg {
 }
 
 @media (max-width: 45em){
+    .project-section{
+        padding: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        
+    }
+
     .container{
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0.5;
+        margin-right: 0.5;
     }
     .sk-sec-title{
         font-size: var(--fs-sub-title);
