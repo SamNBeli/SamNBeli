@@ -69,9 +69,9 @@
                                 {% endfor %}
                             </div>
                             <div class="prj-btn-link">
-                                <button class="prj-btn" onclick="window.location.href = '{{project.sourcelink}}'">Source</button>
-                                <button class="prj-btn" onclick="window.location.href = '{{project.livelink}}'">Live</button>
-                            </div>
+                                <button class="prj-btn" onclick="window.open('{{project.sourcelink}}', '_blank')">Source</button>
+                                <button class="prj-btn" onclick="window.open('{{project.livelink}}', '_blank')">Live</button>
+                            </div>                            
                         </div>
                         <div class="prj-img">
                             <img class="prj-cover" src={{project.image}} alt="Images"/>
