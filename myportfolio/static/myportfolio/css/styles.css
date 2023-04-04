@@ -42,12 +42,6 @@ svg {
     margin: 0 auto;
 }
 
-.container{
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-
 /* -----NAVBAR----- */
 .nav{
     background-color: var(--clr-background-blk);
@@ -64,12 +58,14 @@ svg {
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--clr-primary-text-white);
+    margin-left: 1rem;
 }
 
 .navbar-nav li{
     display: inline-block;
-    margin-left: 0.5rem;
+    margin-right: 1rem;
 }
+
 
 
 /* -----HERO-SECTION----- */
@@ -94,7 +90,6 @@ svg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /*background-color: #3f3f3f;*/
 }
 
 /* -----SKILL-SECTION----- */
@@ -255,8 +250,21 @@ svg {
     justify-content: space-between;
 }
 
+.ftr-element{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 
 @media (max-width: 62em){
+    .navbar-brand{
+        margin-left: 0;
+    }
+    .navbar-nav li{
+        margin-right: 0;
+        margin-left: 0.5rem;
+    }
+
     .sk-name {
         display: none;
     }
