@@ -42,6 +42,11 @@ svg {
     margin: 0 auto;
 }
 
+.container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 
 /* -----NAVBAR----- */
 .nav{
@@ -282,7 +287,6 @@ svg {
         padding-bottom: 1rem;
         
     }
-
     .container{
         margin-left: 0.5;
         margin-right: 0.5;
