@@ -28,15 +28,17 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['samnbeli.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['samnbeli.com', 'samnbeli.up.railway.app', '127.0.0.1',]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://0.0.0.0',
+    'https://samnbeli.com',
+    'https://samnbeli.com/admin/login/?next=/admin',
     'http://localhost',
-    'https://samnbeli.up.railway.app',
     'https://*.up.railway.app',
-    'https://samnbeli.up.railway.app/admin/login/?next=/admin',
-    'https://*.railway.app']
+    'https://*.up.railway.app/admin/login/?next=/admin',
+    'https://*.railway.app',
+    ]
 
 # Application definition
 
