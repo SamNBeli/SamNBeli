@@ -69,8 +69,12 @@
                                 {% endfor %}
                             </div>
                             <div class="prj-btn-link">
+                                {% if project.sourcelink %}
                                 <button class="prj-btn" onclick="window.open('{{project.sourcelink}}', '_blank')">Source</button>
+                                {% endif %}
+                                {% if project.livelink %}
                                 <button class="prj-btn" onclick="window.open('{{project.livelink}}', '_blank')">Live</button>
+                                {% endif %}
                             </div>                            
                         </div>
                         <div class="prj-img">
