@@ -1,11 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import PrimaryLayout from '../layouts/PrimaryLayout.astro';
+import HeroImg from '../assets/images/deep-learning.svg';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<PrimaryLayout title = "Home">
+	
+    <section class="hero-section">
+        <p class="hero-intro">
+  			I build things that think. From clean interfaces to backend logic to the models behind the curtain, I’m exploring how AI can elevate the way we interact with technology and how code can stay both practical and curious.
+		</p>
+		<HeroImg class ="hero-img"/>
+    </section>
+
+	<section>
+		<h2>Project</h2>
+	</section>
+    
+</PrimaryLayout>
+
+<style>
+	.hero-section {
+  		display: grid;
+  		grid-template-columns: 1fr auto;
+  		gap: 2rem;
+  		align-items: center;
+		min-height: 65vh;
+	}
+
+	.hero-img {
+  		max-width: 500px;
+  		max-height: 500px;
+  		width: 100%;
+  		height: auto;
+  		display: block;
+	}
+
+	@media (max-width: 768px) {
+		.hero-section {
+	    	grid-template-columns: 1fr;
+	  	}
+
+	  	.hero-img {
+	   		display: none;
+	  	}
+	}
+</style>

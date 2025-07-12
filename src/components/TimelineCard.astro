@@ -1,0 +1,30 @@
+---
+
+const { date, school, title, description, achievements } = Astro.props;
+---
+
+<div class="card">
+      <h4>{date} - {school}</h4>
+  <h3>{title}</h3>
+  {description && <p>{description}</p>}
+  {achievements && (
+    <ul>
+      {achievements.map((item: string) => <li>{item}</li>)}
+    </ul>
+  )}
+</div>
+
+<style>
+      .card {
+    margin: 1.5rem 0;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+    padding-left: 1.25rem;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+</style>

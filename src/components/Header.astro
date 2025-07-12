@@ -1,0 +1,102 @@
+---
+import GitHubIcon from '../assets/icons/github.svg';
+import LinkedInIcon from '../assets/icons/linked.svg';
+import MenuIcon from '../assets/icons/menu.svg';
+---
+
+<nav>
+    
+    <h1>Sam-N.Béli</h1>
+
+
+    <MenuIcon class="h-menu hamburger" />
+
+    
+    <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+    </ul>
+    <ul class="social">
+        <li><a href="https://github.com/SamNBeli" target="_blank"><GitHubIcon class="h-icon" /></a></li>
+        <li><a href="https://www.linkedin.com/in/samneribelizaire" target="_blank"><LinkedInIcon class="h-icon" /></a></li>
+    </ul>
+    
+</nav>
+
+<style>
+    .social svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .h-menu {
+        width: 34px;
+        height: 34px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        padding: 0 1rem;
+    }
+
+    .menu, .social{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        width: 34px;
+    }
+
+    .hamburger .bar {
+        flex-basis: 100%;
+        height: 4px;
+        background-color: #111;
+        margin: 3px;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-wrap: wrap;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu, .social {
+            display: none;
+            flex-basis: 100%;
+            flex-wrap: wrap;
+        }
+
+
+    }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger') as HTMLElement | null;
+    const menu = document.querySelector('.menu') as HTMLElement | null;
+    const social = document.querySelector('.social') as HTMLElement | null;
+    let menuOpen = false;
+
+    hamburger?.addEventListener('click', () => {
+      if (!menuOpen) {
+        if (menu) menu.style.display = "block";
+        if (social) social.style.display = "flex";
+        menuOpen = true;
+      } else {
+        if (menu) menu.style.display = "none";
+        if (social) social.style.display = "none";
+        menuOpen = false;
+      }
+    });
+  });
+</script>
