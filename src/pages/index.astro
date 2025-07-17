@@ -12,8 +12,9 @@ import HeroImg from '../assets/images/deep-learning.svg';
 		<HeroImg class ="hero-img"/>
     </section>
 
-	<section>
+	<section class="section">
 		<h2>Project</h2>
+		<p>Comming soon!</p>
 	</section>
     
 </PrimaryLayout>
@@ -38,10 +39,16 @@ import HeroImg from '../assets/images/deep-learning.svg';
 	@media (max-width: 768px) {
 		.hero-section {
 	    	grid-template-columns: 1fr;
+			min-height: 0;
+			margin-top: 3rem;
 	  	}
 
 	  	.hero-img {
 	   		display: none;
 	  	}
+
+		.section {
+			padding-top: 3rem;
+		}
 	}
 </style>
