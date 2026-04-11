@@ -1,51 +1,52 @@
 ---
-import PrimaryLayout from '../layouts/PrimaryLayout.astro';
-import HeroImg from '../assets/images/deep-learning.svg';
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+import HeroImg from "../assets/images/robot.svg";
 ---
 
-<PrimaryLayout title = "Home">
-	
-    <section class="hero-section">
-        <p class="hero-intro">
-  			I build things that think. From clean interfaces to backend logic to the models behind the curtain, I’m exploring how AI can elevate the way we interact with technology and how code can stay both practical and curious.
+<PrimaryLayout title="Home">
+	<section class="hero-section">
+		<p class="hero-intro">
+			I build things that move and respond. From embedded systems to
+			robotic logic, I’m exploring the space where code meets the physical
+			world and I document every step of it. Still learning, always
+			building.
 		</p>
-		<HeroImg class ="hero-img"/>
-    </section>
+		<HeroImg class="hero-img" />
+	</section>
 
 	<section class="section">
 		<h2>Project</h2>
-		<p>Comming soon!</p>
+		<p>Coming soon!</p>
 	</section>
-    
 </PrimaryLayout>
 
 <style>
 	.hero-section {
-  		display: grid;
-  		grid-template-columns: 1fr auto;
-  		gap: 2rem;
-  		align-items: center;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: 2rem;
+		align-items: center;
 		min-height: 65vh;
 	}
 
 	.hero-img {
-  		max-width: 500px;
-  		max-height: 500px;
-  		width: 100%;
-  		height: auto;
-  		display: block;
+		max-width: 500px;
+		max-height: 500px;
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	@media (max-width: 768px) {
 		.hero-section {
-	    	grid-template-columns: 1fr;
+			grid-template-columns: 1fr;
 			min-height: 0;
 			margin-top: 3rem;
-	  	}
+		}
 
-	  	.hero-img {
-	   		display: none;
-	  	}
+		.hero-img {
+			display: none;
+		}
 
 		.section {
 			padding-top: 3rem;

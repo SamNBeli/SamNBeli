@@ -1,14 +1,13 @@
 ---
-import PrimaryLayout from '../layouts/PrimaryLayout.astro';
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 import TimelineCard from "../components/TimelineCard.astro";
 ---
 
-<PrimaryLayout title = "About Me">
-	<section class="col">
-        <h1 class="title">
-		    Timeline
-	    </h1>
+<PrimaryLayout title="About Me">
+    <section class="col">
+        <h1 class="title">Timeline</h1>
         <div class="contents">
+            <!--
             <div class="box">
                 <TimelineCard date="September 2025" 
                       school="ULaval" 
@@ -20,37 +19,35 @@ import TimelineCard from "../components/TimelineCard.astro";
                                 "Will use Python, PyTorch, and TensorFlow and a lot more"
                         ]}/>
             </div>
+        -->
             <div class="box">
-                <TimelineCard date="January 2018 to December 2021" 
-                      school="UQO" 
-                      title="B.Sc. in Computer Science"
-                      description="Studied core computer science foundations."
-                      achievements={[
-                                "Studied algorithms, data structures, and project management",
-                                "Completed final project: a RESTful API that compile Java code",
-                                "Learned Java, python, SQL"
-                        ]}/>
+                <TimelineCard
+                    date="January 2018 to December 2021"
+                    school="UQO"
+                    title="B.Sc. in Computer Science"
+                    description="Studied core computer science foundations."
+                    achievements={[
+                        "Studied algorithms, data structures, and project management",
+                        "Completed final project: a RESTful API that compile Java code",
+                        "Learned Java, python, SQL",
+                    ]}
+                />
             </div>
-            
         </div>
-        
-
-
     </section>
-    
 </PrimaryLayout>
 
 <style>
     .col {
         margin-top: 3rem;
     }
-    .col .contents{
+    .col .contents {
         padding: 0px 30px;
         border-left: 2px solid #111;
         position: relative;
     }
 
-        .box {
+    .box {
         position: relative;
     }
     .box::before {
